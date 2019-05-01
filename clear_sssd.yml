@@ -13,4 +13,4 @@
     - name: start the sssd service
       service:
         name: sssd
-        state: started
+        state: restarted
