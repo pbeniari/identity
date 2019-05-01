@@ -1,16 +1,6 @@
 ---
 - name: Simple Utility to Clear the SSSD Cache
-  hosts: infservers
+  hosts: all
   tasks:
-    - name: stop the sssd service
-      service:
-        name: sssd
-        state: stopped
-
-    - name: clear the sssd cache
+      name: clear the sssd cache
       command: "sss_cache -E"
-
-    - name: start the sssd service
-      service:
-        name: sssd
-        state: restarted
