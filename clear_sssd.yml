@@ -1,6 +1,0 @@
----
-- name: Simple Utility to Clear the SSSD Cache
-  hosts: all
-  tasks:
-    - name: clear the sssd cache
-      command: "sss_cache -E"
